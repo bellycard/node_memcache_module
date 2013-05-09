@@ -1,0 +1,19 @@
+{
+  "name": "node_memcache_module",
+  "description": "Simple node module to wrap memcache and apply our settings",
+  "author": "Belly Inc.",
+  "main": "node_memcache_module",
+  "version": "0.0.1",
+  "dependencies": {
+    "memcached": "0.2.2",
+    "node_settings_module": "git://github.com/bellycard/node_settings_module.git#v0.0.1"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:bellycard/node_memcache_module.git"
+  },
+  "license": "MIT"
+}
