@@ -47,7 +47,15 @@ exports.set = function(cache_key, value, timeout, callback) {
 };
 
 prepare_connection = function() {
-  return memcached = new Memcached(settings.get("memcached").servers);
+  var other_settings;
+  other_settings = {
+    retries: 1,
+    retry: 100,
+    remove: false,
+    timeout: 100,
+    reconnect: 500
+  };
+  return memcached = new Memcached(settings.get("memcached").servers, other_settings);
 };
 
 prepare_connection();
